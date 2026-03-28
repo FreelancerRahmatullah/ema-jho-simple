@@ -1,11 +1,11 @@
-import React from 'react';
+import './Cart.css'
 
 const Cart = (props) => {
     const cart = props.cart;
     let total = 0;
     for(let i = 0; i < cart.length; i++){
         const product = cart[i];
-        total = total + product.price
+        total = total + product.price;
     }
     const tax = total / 10;
     let shipping = 0;
@@ -20,13 +20,13 @@ const Cart = (props) => {
     };
 
     return (
-        <div>
-                <h4>Order Summary</h4>
+        <div className="order-summary">
+                <h3>Order Summary</h3>
                 <p><small>Items Ordered: {cart.length}</small></p>
-                <p><small>Product Price: {total}</small></p>
-                <p><small>Shipping Cost: {shipping}</small></p>
-                <p><small>Tax: {tax}</small></p>
-                <p>Total Price: {total + shipping + tax}</p>
+                <p><small>Product Price: {(total).toFixed(2)}</small></p>
+                <p><small>Shipping Cost: {(shipping).toFixed(2)}</small></p>
+                <p><small>Tax: {(tax).toFixed(2)}</small></p>
+                <p>Total Price: {(total + shipping + tax).toFixed(2)}</p>
         </div>
     );
 };
