@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Shop from "./components/Shop/Shop";
@@ -23,3 +24,20 @@ function App() {
 }
 
 export default App;
+=======
+import Header from './components/Header/Header';
+import Shop from './components/Shop/Shop';
+
+
+function App() {
+
+  return (
+    <>
+  <Header></Header>
+  <Shop></Shop>
+    </>
+  )
+}
+
+export default App
+>>>>>>> 4d0f0e00976f506594f4061c9aeca1340740d877
